@@ -6,9 +6,9 @@ export default function LoginForm() {
     e.preventDefault()
     const email = e.target.email.value
     const password = e.target.password.value
-const response = await signInWithEmailAndPassword(auth, email, password)
-.catch(error => alert(error.message))
-console.log(response?.user)
+    const response = await signInWithEmailAndPassword(auth, email, password)
+      .catch(error => alert(error.message))
+    console.log(response?.user)
   }
   return (
     <form onSubmit={handleLogin}>
